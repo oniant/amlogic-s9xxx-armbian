@@ -29,6 +29,7 @@ on:
           - 5.10.1
           - 5.15.1
           - 6.1.1
+          - 5.15.125
       kernel_auto:
         description: "Auto use the latest kernel"
         required: false
@@ -57,7 +58,7 @@ on:
         type: choice
         options:
           - -ophub
-          - -yourname
+          - -onaint
 
 env:
   TZ: America/New_York
@@ -90,7 +91,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Compile the kernel [ ${{ inputs.kernel_version }} ]
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: oniant/amlogic-s9xxx-armbian@main
         if: ${{ steps.init.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: kernel
