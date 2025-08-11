@@ -83,7 +83,7 @@ delete_source="false"
 silent_log="false"
 
 # Compile toolchain download mirror, run on Armbian
-dev_repo="https://github.com/ophub/kernel/releases/download/dev"
+dev_repo="https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel"
 # Arm GNU Toolchain source: https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
 gun_file="arm-gnu-toolchain-14.3.rel1-aarch64-aarch64-none-linux-gnu.tar.xz"
 # Set the toolchain path
