@@ -18,12 +18,14 @@ on:
         options:
           - unifreq
           - codesnas
+          - oniant
       kernel_version:
         description: "Select kernel version"
         required: false
         default: "5.4.y"
         type: choice
         options:
+          - 5.15.189
           - 5.4.y
           - 5.10.y
           - 5.15.y
