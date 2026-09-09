@@ -36,6 +36,11 @@ on:
         required: false
         default: true
         type: boolean
+      auto_patch:
+        description: "Sets whether to apply custom kernel patches"
+        required: false
+        default: false
+        type: boolean
       delete_source:
         description: "Delete source after compilation"
         required: false
@@ -204,6 +209,7 @@ jobs:
           ccache_clear: ${{ inputs.ccache_clear }}
           docker_hostpath: /builder
           docker_image: ophub/armbian-${{ inputs.docker_image }}:arm64
+          auto_patch: ${{inputs.auto_patch}}
 
       - name: Upload Kernel to Release
         uses: ophub/upload-to-releases@main
